@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C2CE5A522CB9011A0073FE0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE5A512CB9011A0073FE0A /* AppDelegate.swift */; };
+		C2CE5A542CB9011A0073FE0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE5A532CB9011A0073FE0A /* SceneDelegate.swift */; };
+		C2CE5A562CB9011A0073FE0A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE5A552CB9011A0073FE0A /* MainViewController.swift */; };
+		C2CE5A5B2CB901210073FE0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CE5A5A2CB901210073FE0A /* Assets.xcassets */; };
+		C2CE5A5E2CB901210073FE0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2CE5A5C2CB901210073FE0A /* LaunchScreen.storyboard */; };
+		C2CE5A662CB9013D0073FE0A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE5A652CB9013D0073FE0A /* NetworkService.swift */; };
+		C2CE5A692CB92F9A0073FE0A /* SportsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE5A682CB92F9A0073FE0A /* SportsResponse.swift */; };
+		CEB375E4415A5E6B2A5A61B6 /* Pods_Football_Statistics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D75286BE0C58B67E677FCF /* Pods_Football_Statistics.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		05763D97C6F4E75CABE5C7E7 /* Pods-Football Statistics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Football Statistics.debug.xcconfig"; path = "Target Support Files/Pods-Football Statistics/Pods-Football Statistics.debug.xcconfig"; sourceTree = "<group>"; };
+		224335E15C3AD18EF20AFB79 /* Pods-Football Statistics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Football Statistics.release.xcconfig"; path = "Target Support Files/Pods-Football Statistics/Pods-Football Statistics.release.xcconfig"; sourceTree = "<group>"; };
+		B0D75286BE0C58B67E677FCF /* Pods_Football_Statistics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Football_Statistics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2CE5A4E2CB9011A0073FE0A /* Football Statistics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Football Statistics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2CE5A512CB9011A0073FE0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C2CE5A532CB9011A0073FE0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C2CE5A552CB9011A0073FE0A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C2CE5A5A2CB901210073FE0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2CE5A5D2CB901210073FE0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C2CE5A5F2CB901210073FE0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2CE5A652CB9013D0073FE0A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		C2CE5A682CB92F9A0073FE0A /* SportsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsResponse.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2CE5A4B2CB9011A0073FE0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB375E4415A5E6B2A5A61B6 /* Pods_Football_Statistics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3423D47143DE9834DC8723AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05763D97C6F4E75CABE5C7E7 /* Pods-Football Statistics.debug.xcconfig */,
+				224335E15C3AD18EF20AFB79 /* Pods-Football Statistics.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C2CE5A452CB9011A0073FE0A = {
+			isa = PBXGroup;
+			children = (
+				C2CE5A502CB9011A0073FE0A /* Football Statistics */,
+				C2CE5A4F2CB9011A0073FE0A /* Products */,
+				3423D47143DE9834DC8723AE /* Pods */,
+				DDC111825B8934494BD33B8E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C2CE5A4F2CB9011A0073FE0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2CE5A4E2CB9011A0073FE0A /* Football Statistics.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2CE5A502CB9011A0073FE0A /* Football Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				C2CE5A512CB9011A0073FE0A /* AppDelegate.swift */,
+				C2CE5A532CB9011A0073FE0A /* SceneDelegate.swift */,
+				C2CE5A552CB9011A0073FE0A /* MainViewController.swift */,
+				C2CE5A5A2CB901210073FE0A /* Assets.xcassets */,
+				C2CE5A5C2CB901210073FE0A /* LaunchScreen.storyboard */,
+				C2CE5A5F2CB901210073FE0A /* Info.plist */,
+				C2CE5A672CB92F740073FE0A /* Network */,
+			);
+			path = "Football Statistics";
+			sourceTree = "<group>";
+		};
+		C2CE5A672CB92F740073FE0A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C2CE5A652CB9013D0073FE0A /* NetworkService.swift */,
+				C2CE5A682CB92F9A0073FE0A /* SportsResponse.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DDC111825B8934494BD33B8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0D75286BE0C58B67E677FCF /* Pods_Football_Statistics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2CE5A4D2CB9011A0073FE0A /* Football Statistics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2CE5A622CB901210073FE0A /* Build configuration list for PBXNativeTarget "Football Statistics" */;
+			buildPhases = (
+				1EFF8B3E60CC4952CB64B22B /* [CP] Check Pods Manifest.lock */,
+				C2CE5A4A2CB9011A0073FE0A /* Sources */,
+				C2CE5A4B2CB9011A0073FE0A /* Frameworks */,
+				C2CE5A4C2CB9011A0073FE0A /* Resources */,
+				482599B2B87C9E24D8D4C6D8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Football Statistics";
+			productName = "Football Statistics";
+			productReference = C2CE5A4E2CB9011A0073FE0A /* Football Statistics.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2CE5A462CB9011A0073FE0A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					C2CE5A4D2CB9011A0073FE0A = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = C2CE5A492CB9011A0073FE0A /* Build configuration list for PBXProject "Football Statistics" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C2CE5A452CB9011A0073FE0A;
+			productRefGroup = C2CE5A4F2CB9011A0073FE0A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2CE5A4D2CB9011A0073FE0A /* Football Statistics */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2CE5A4C2CB9011A0073FE0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2CE5A5E2CB901210073FE0A /* LaunchScreen.storyboard in Resources */,
+				C2CE5A5B2CB901210073FE0A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EFF8B3E60CC4952CB64B22B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Football Statistics-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		482599B2B87C9E24D8D4C6D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Football Statistics/Pods-Football Statistics-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Football Statistics/Pods-Football Statistics-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Football Statistics/Pods-Football Statistics-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2CE5A4A2CB9011A0073FE0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2CE5A562CB9011A0073FE0A /* MainViewController.swift in Sources */,
+				C2CE5A692CB92F9A0073FE0A /* SportsResponse.swift in Sources */,
+				C2CE5A522CB9011A0073FE0A /* AppDelegate.swift in Sources */,
+				C2CE5A662CB9013D0073FE0A /* NetworkService.swift in Sources */,
+				C2CE5A542CB9011A0073FE0A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C2CE5A5C2CB901210073FE0A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2CE5A5D2CB901210073FE0A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C2CE5A602CB901210073FE0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C2CE5A612CB901210073FE0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2CE5A632CB901210073FE0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05763D97C6F4E75CABE5C7E7 /* Pods-Football Statistics.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6QJHMJC74R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Football Statistics/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Skillbox.Football-Statistics";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C2CE5A642CB901210073FE0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 224335E15C3AD18EF20AFB79 /* Pods-Football Statistics.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6QJHMJC74R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Football Statistics/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Skillbox.Football-Statistics";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2CE5A492CB9011A0073FE0A /* Build configuration list for PBXProject "Football Statistics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2CE5A602CB901210073FE0A /* Debug */,
+				C2CE5A612CB901210073FE0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2CE5A622CB901210073FE0A /* Build configuration list for PBXNativeTarget "Football Statistics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2CE5A632CB901210073FE0A /* Debug */,
+				C2CE5A642CB901210073FE0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2CE5A462CB9011A0073FE0A /* Project object */;
+}
