@@ -14,6 +14,8 @@
 		C2CE5A5E2CB901210073FE0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2CE5A5C2CB901210073FE0A /* LaunchScreen.storyboard */; };
 		C2CE5A662CB9013D0073FE0A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE5A652CB9013D0073FE0A /* NetworkService.swift */; };
 		C2CE5A692CB92F9A0073FE0A /* SportsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE5A682CB92F9A0073FE0A /* SportsResponse.swift */; };
+		C2CE5A6B2CB944370073FE0A /* MainSportCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE5A6A2CB944370073FE0A /* MainSportCollection.swift */; };
+		C2CE5A6F2CBEFA870073FE0A /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE5A6E2CBEFA870073FE0A /* MatchViewController.swift */; };
 		CEB375E4415A5E6B2A5A61B6 /* Pods_Football_Statistics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D75286BE0C58B67E677FCF /* Pods_Football_Statistics.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,8 @@
 		C2CE5A5F2CB901210073FE0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2CE5A652CB9013D0073FE0A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C2CE5A682CB92F9A0073FE0A /* SportsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsResponse.swift; sourceTree = "<group>"; };
+		C2CE5A6A2CB944370073FE0A /* MainSportCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSportCollection.swift; sourceTree = "<group>"; };
+		C2CE5A6E2CBEFA870073FE0A /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +54,6 @@
 				05763D97C6F4E75CABE5C7E7 /* Pods-Football Statistics.debug.xcconfig */,
 				224335E15C3AD18EF20AFB79 /* Pods-Football Statistics.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -75,13 +78,14 @@
 		C2CE5A502CB9011A0073FE0A /* Football Statistics */ = {
 			isa = PBXGroup;
 			children = (
-				C2CE5A512CB9011A0073FE0A /* AppDelegate.swift */,
-				C2CE5A532CB9011A0073FE0A /* SceneDelegate.swift */,
-				C2CE5A552CB9011A0073FE0A /* MainViewController.swift */,
+				C2CE5A672CB92F740073FE0A /* Network */,
+				C2CE5A6C2CBEFA4B0073FE0A /* MainVC */,
+				C2CE5A6D2CBEFA5D0073FE0A /* MatchVC */,
 				C2CE5A5A2CB901210073FE0A /* Assets.xcassets */,
 				C2CE5A5C2CB901210073FE0A /* LaunchScreen.storyboard */,
 				C2CE5A5F2CB901210073FE0A /* Info.plist */,
-				C2CE5A672CB92F740073FE0A /* Network */,
+				C2CE5A512CB9011A0073FE0A /* AppDelegate.swift */,
+				C2CE5A532CB9011A0073FE0A /* SceneDelegate.swift */,
 			);
 			path = "Football Statistics";
 			sourceTree = "<group>";
@@ -93,6 +97,23 @@
 				C2CE5A682CB92F9A0073FE0A /* SportsResponse.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		C2CE5A6C2CBEFA4B0073FE0A /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				C2CE5A552CB9011A0073FE0A /* MainViewController.swift */,
+				C2CE5A6A2CB944370073FE0A /* MainSportCollection.swift */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		C2CE5A6D2CBEFA5D0073FE0A /* MatchVC */ = {
+			isa = PBXGroup;
+			children = (
+				C2CE5A6E2CBEFA870073FE0A /* MatchViewController.swift */,
+			);
+			path = MatchVC;
 			sourceTree = "<group>";
 		};
 		DDC111825B8934494BD33B8E /* Frameworks */ = {
@@ -218,6 +239,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2CE5A562CB9011A0073FE0A /* MainViewController.swift in Sources */,
+				C2CE5A6B2CB944370073FE0A /* MainSportCollection.swift in Sources */,
+				C2CE5A6F2CBEFA870073FE0A /* MatchViewController.swift in Sources */,
 				C2CE5A692CB92F9A0073FE0A /* SportsResponse.swift in Sources */,
 				C2CE5A522CB9011A0073FE0A /* AppDelegate.swift in Sources */,
 				C2CE5A662CB9013D0073FE0A /* NetworkService.swift in Sources */,
@@ -276,7 +299,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -339,7 +362,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

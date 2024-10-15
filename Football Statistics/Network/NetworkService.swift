@@ -16,7 +16,7 @@ public final class NetworkService {
     let rapidApiHost = "allscores.p.rapidapi.com"
     let rapidApiKey = "facd15fd6bmsha8735dafb377a4fp187c1fjsna639ae34d6b6"
     
-    func fetchData() {
+    func fetchData(completion: @escaping (SportsResponse) -> Void) {
 //        проверка URL
         guard let url = URL(string: urlString) else {
             print("Неверный URL")
@@ -47,11 +47,51 @@ public final class NetworkService {
             }
 //            Парсим JSON данные
             do {
-                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                    let sportsResponce = try JSONDecoder().decode(SportsResponse.self, from: data)
-                    self.sport = sportsResponce
-                    print("\(sportsResponce.sports)")
-                }
+                let sportsResponce = try JSONDecoder().decode(SportsResponse.self, from: data)
+                completion(sportsResponce)
+                print(sportsResponce)
+            } catch {
+                print("Ошибка парсинга JSON: \(error)")
+            }
+        }
+        task.resume()
+    }
+    
+    func fetchMatches(for sportId: Int, endDate: String, completion: @escaping (MatchesResponce?) -> Void) {
+        let matchesURLString = "https://allscores.p.rapidapi.com/api/allscores/games-scores?withTop=true&timezone=America%2FChicago&sport=\(sportId)&endDate=\(endDate)"
+        
+        guard let url = URL(string: matchesURLString) else {
+            print("Неверный URL")
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        request.addValue(rapidApiKey, forHTTPHeaderField: "x-rapidapi-key")
+        request.addValue(rapidApiHost, forHTTPHeaderField: "x-rapidapi-host")
+        
+        let session = URLSession.shared
+        let task = session.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                print("Ошибка при выполнении запроса \(error)")
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                print("Ошибка HTTP")
+                return
+            }
+            
+            guard let data = data else {
+                print("Нет данных")
+                return
+            }
+//            Парсим JSON данные
+            do {
+                let matchesResponce = try JSONDecoder().decode(MatchesResponce.self, from: data)
+                completion(matchesResponce)
+                print(matchesResponce)
             } catch {
                 print("Ошибка парсинга JSON: \(error)")
             }
