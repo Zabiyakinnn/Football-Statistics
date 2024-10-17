@@ -106,7 +106,7 @@ extension MainSportCollection {
             make.width.equalTo(28)
         }
         seperatorIliveGemes.snp.makeConstraints { make in
-            make.right.equalTo(contentView.snp.right).offset(-64)
+            make.right.equalTo(contentView.snp.right).offset(-55)
             make.centerY.equalTo(contentView.snp.centerY)
             make.width.equalTo(28)
             make.height.equalTo(22)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2409DB22CBFB1A600DE885C /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2409DB12CBFB1A600DE885C /* MatchCell.swift */; };
 		C2CE5A522CB9011A0073FE0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE5A512CB9011A0073FE0A /* AppDelegate.swift */; };
 		C2CE5A542CB9011A0073FE0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE5A532CB9011A0073FE0A /* SceneDelegate.swift */; };
 		C2CE5A562CB9011A0073FE0A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE5A552CB9011A0073FE0A /* MainViewController.swift */; };
@@ -23,6 +24,7 @@
 		05763D97C6F4E75CABE5C7E7 /* Pods-Football Statistics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Football Statistics.debug.xcconfig"; path = "Target Support Files/Pods-Football Statistics/Pods-Football Statistics.debug.xcconfig"; sourceTree = "<group>"; };
 		224335E15C3AD18EF20AFB79 /* Pods-Football Statistics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Football Statistics.release.xcconfig"; path = "Target Support Files/Pods-Football Statistics/Pods-Football Statistics.release.xcconfig"; sourceTree = "<group>"; };
 		B0D75286BE0C58B67E677FCF /* Pods_Football_Statistics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Football_Statistics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2409DB12CBFB1A600DE885C /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
 		C2CE5A4E2CB9011A0073FE0A /* Football Statistics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Football Statistics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CE5A512CB9011A0073FE0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2CE5A532CB9011A0073FE0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				C2CE5A6E2CBEFA870073FE0A /* MatchViewController.swift */,
+				C2409DB12CBFB1A600DE885C /* MatchCell.swift */,
 			);
 			path = MatchVC;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				C2CE5A522CB9011A0073FE0A /* AppDelegate.swift in Sources */,
 				C2CE5A662CB9013D0073FE0A /* NetworkService.swift in Sources */,
 				C2CE5A542CB9011A0073FE0A /* SceneDelegate.swift in Sources */,
+				C2409DB22CBFB1A600DE885C /* MatchCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

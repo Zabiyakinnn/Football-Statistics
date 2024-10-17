@@ -46,4 +46,7 @@ struct Competition: Codable {
     let name: String
     let totalGames: Int?
     let liveGames: Int?
+    var imageURL: URL? {
+        return URL(string: "https://allscores.p.rapidapi.com/api/allscores/img/large/competitor/\(id)/version/1")
+    }
 }

@@ -57,6 +57,30 @@ public final class NetworkService {
         task.resume()
     }
     
+    func loadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        request.addValue(rapidApiKey, forHTTPHeaderField: "x-rapidapi-key")
+        request.addValue(rapidApiHost, forHTTPHeaderField: "x-rapidapi-host")
+        
+        let task = URLSession.shared.dataTask(with: request) { data, responce, error in
+            if let error = error {
+                print("Ошибка загрузки изображения \(error)")
+            }
+            guard let data = data else {
+                print("Нет данных для изображения")
+                completion(nil)
+                return
+            }
+            if let dataString = String(data: data, encoding: .utf8) {
+                print("Ответ от сервера \(dataString)")
+            }
+            completion(UIImage(data: data))
+        }
+        task.resume()
+    }
+    
     func fetchMatches(for sportId: Int, endDate: String, completion: @escaping (MatchesResponce?) -> Void) {
         let matchesURLString = "https://allscores.p.rapidapi.com/api/allscores/games-scores?withTop=true&timezone=America%2FChicago&sport=\(sportId)&endDate=\(endDate)"
         

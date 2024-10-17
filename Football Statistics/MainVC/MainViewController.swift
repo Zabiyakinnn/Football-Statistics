@@ -12,6 +12,15 @@ class MainViewController: UIViewController {
     
     private var sportName: [Sport] = []
     var mainSportCollection = "mainSportCollection"
+    let todayDate = Date()
+    let dateFormatter = DateFormatter()
+
+    private var activityIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .medium)
+        indicator.color = UIColor(red: 0.0/255.0, green: 46.0/255.0, blue: 54.0/255.0, alpha: 1.0)
+        indicator.hidesWhenStopped = true
+        return indicator
+    }()
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -40,8 +49,10 @@ class MainViewController: UIViewController {
     }
 
     private func request() {
+        activityIndicator.startAnimating()
         NetworkService.shared.fetchData { [weak self] data in
             DispatchQueue.main.async {
+                self?.activityIndicator.stopAnimating()
                 guard let self else { return }
                 self.sportName = data.sports.map { sport in
                     var mutableSport = sport
@@ -78,15 +89,27 @@ class MainViewController: UIViewController {
     }
 
     private func configureItem() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
+        let favorites = UIBarButtonItem(
             image: UIImage(systemName: "magnifyingglass"),
             style: .plain,
             target: self,
-            action: #selector(moreButtonTapped))
+            action: #selector(searchButtonTapped))
+        
+        let search = UIBarButtonItem(
+            image: UIImage(systemName: "star"),
+            style: .plain,
+            target: self,
+            action: #selector(favoritesButtonTapped))
+        
+        navigationItem.rightBarButtonItems = [favorites, search]
     }
     
-    @objc private func moreButtonTapped() {
+    @objc private func searchButtonTapped() {
         print("поиск")
+    }
+    
+    @objc private func favoritesButtonTapped() {
+        print("избранное")
     }
 }
 
@@ -106,16 +129,24 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedSport = sportName[indexPath.row]
         let sportId = selectedSport.id
-        let endDate = "15/10/2024"
+        
+        dateFormatter.dateFormat = "EEEE d MMMM"
+        dateFormatter.locale = Locale(identifier: "eu_US")
+        let formatterDate = dateFormatter.string(from: todayDate)
+        
+        let endDate = formatterDate
         
         let matchVC = MatchViewController()
+        matchVC.activityIndicator.startAnimating()
         self.navigationController?.pushViewController(matchVC, animated: true)
         
         NetworkService.shared.fetchMatches(for: sportId, endDate: endDate) { [weak self] matchResponce in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 if let matchResponce = matchResponce {
+                    matchVC.title = selectedSport.name
                     matchVC.updateWithData(matchResponce)
+                    matchVC.activityIndicator.stopAnimating()
                     print(matchResponce.competitions)
                 } else {
                     print("Ошибка. Не удалось получить данные")
@@ -132,6 +163,7 @@ private extension MainViewController {
     }
     func prepareView() {
         view.addSubview(collectionView)
+        view.addSubview(activityIndicator)
     }
     func setupeConstraint() {
         collectionView.snp.makeConstraints { make in
@@ -139,6 +171,11 @@ private extension MainViewController {
             make.left.equalTo(view.snp.left).offset(20)
             make.right.equalTo(view.snp.right).offset(-20)
             make.bottom.equalToSuperview()
+        }
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
         }
     }
 }
