@@ -50,3 +50,10 @@ struct Competition: Codable {
         return URL(string: "https://allscores.p.rapidapi.com/api/allscores/img/large/competitor/\(id)/version/1")
     }
 }
+
+//data
+struct DateModel {
+    let dayOfWeek: String
+    let day: String
+    let isToday: Bool
+}

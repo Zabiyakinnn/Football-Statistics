@@ -129,6 +129,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedSport = sportName[indexPath.row]
         let sportId = selectedSport.id
+        print("Кол-во sportName ---- \(sportName.count)")
         
         dateFormatter.dateFormat = "EEEE d MMMM"
         dateFormatter.locale = Locale(identifier: "eu_US")
